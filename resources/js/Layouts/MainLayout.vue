@@ -3,8 +3,8 @@
     <Link href="/hello">Show Page</Link> &nbsp;
     <Link href="/listing">Listing Page</Link>
     <!-- <div>The page with time {{ timer }}</div> -->
-    <div v-if="page.props.flash.success" class="success">
-        {{ page.props.flash.success }}
+    <div v-if="flashMessage" class="success">
+        {{ flashMessage }}
     </div>
     <slot>
         default
@@ -12,10 +12,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 
 // page.props.flash.success
 const page = usePage()
+const flashMessage = computed(
+    () => page.props.flash.success
+);
 // import { ref } from 'vue';
 
 // const timer = ref(0);
