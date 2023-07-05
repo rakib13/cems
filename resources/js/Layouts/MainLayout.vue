@@ -2,6 +2,10 @@
     <Link href="/listing">Listing</Link> &nbsp;
     <Link href="/listing/create">New Listing</Link>
     <!-- <div>The page with time {{ timer }}</div> -->
+    <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+
+    </header>
+
     <div v-if="flashMessage" class="success">
         {{ flashMessage }}
     </div>
@@ -24,9 +28,3 @@ const flashMessage = computed(
 // const timer = ref(0);
 // setInterval(()=> timer.value++, 1000);
 </script>
-<style scoped>
-    .success{
-        background-color: greenyellow;
-        color: black;
-    }
-</style>

@@ -10,7 +10,7 @@
         @inertiaHead
         
     </head>
-    <body>
+    <body class="bg-white dark:bg-grey-900 text-gray-900 dark:text-gray-300">
         @inertia
     </body>
 </html>
